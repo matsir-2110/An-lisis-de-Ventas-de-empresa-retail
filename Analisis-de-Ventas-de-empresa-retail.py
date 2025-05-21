@@ -2,16 +2,17 @@
 
 import random
 
+x = 0
 categorias = {
     "bajas": {"ventas": [],
-              "total": [],
-              "promedio": []},
+              "total": x,
+              "promedio": x},
     "medias": {"ventas": [],
-               "total": [],
-               "promedio": []},
+               "total": x,
+               "promedio": x},
     "altas": {"ventas": [],
-              "total": [],
-              "promedio": []}
+              "total": x,
+              "promedio": x}
 }
 
 cont = 0
@@ -26,23 +27,28 @@ while cont != 100:
     cont += 1
 
 # Calcular el total de ventas por categoría
-
+for i in categorias["bajas"]["ventas"]:
+    categorias["bajas"]["total"] +=  i
+for i in categorias["medias"]["ventas"]:
+    categorias["medias"]["total"] +=  i
+for i in categorias["altas"]["ventas"]:
+    categorias["altas"]["total"] +=  i
 
 # Calcular el total de ventas por categoría
 
 
 #   Impresión de cada apartado
-print("BAJAS")
+print("\nBAJAS")
 print("Ventas", categorias["bajas"]["ventas"])
-print("Total", categorias["bajas"]["Total"])
-print("Promedio", categorias["bajas"]["ventas"])
+print(f"Total U{'$'}S", categorias["bajas"]["total"])
+print(f"Promedio U{'$'}S", categorias["bajas"]["promedio"])
 
-print("MEDIAS")
+print("\nMEDIAS")
 print("Ventas", categorias["medias"]["ventas"])
-print("Total", categorias["medias"]["Total"])
-print("Promedio", categorias["medias"]["ventas"])
+print(f"Total U{'$'}S", categorias["medias"]["total"])
+print(f"Promedio U{'$'}S", categorias["medias"]["promedio"])
 
-print("ALTAS")
+print("\nALTAS")
 print("Ventas", categorias["altas"]["ventas"])
-print("Total", categorias["altas"]["Total"])
-print("Promedio", categorias["altas"]["ventas"])
+print(f"Total U{'$'}S" , categorias["altas"]["total"])
+print(f"Promedio U{'$'}S", categorias["altas"]["promedio"])
