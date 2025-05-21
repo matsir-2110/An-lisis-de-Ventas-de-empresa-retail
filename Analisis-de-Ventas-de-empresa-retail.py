@@ -35,9 +35,11 @@ for i in categorias["altas"]["ventas"]:
     categorias["altas"]["total"] +=  i
 
 # Calcular el total de ventas por categoría
+categorias["bajas"]["promedio"] = categorias["bajas"]["total"] / len(categorias["bajas"]["ventas"])
+categorias["medias"]["promedio"] = categorias["medias"]["total"] / len(categorias["medias"]["ventas"])
+categorias["altas"]["promedio"] = categorias["altas"]["total"] / len(categorias["altas"]["ventas"])
 
-
-#   Impresión de cada apartado
+# Impresión de cada apartado
 print("\nBAJAS")
 print("Ventas", categorias["bajas"]["ventas"])
 print(f"Total U{'$'}S", categorias["bajas"]["total"])
